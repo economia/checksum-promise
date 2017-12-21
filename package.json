@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Get checksum of a file in the browser using promises.",
   "module": "src/index.js",
-  "main": "lib/index.min.js",
+  "main": "lib/checksum-promise.js",
   "repository": "https://github.com/EconomiaDevs/checksum-promise.git",
   "contributors": [
     "Patrik Šlárka <patrik.slarka@economia.cz>",
@@ -14,7 +14,11 @@
   "private": false,
   "scripts": {
     "eslint": "NODE_ENV=test eslint --color src",
-    "build": "webpack --bail --config config/webpack.config.js"
+    "build": "webpack -p --bail --config config/webpack.config.js",
+    "doc:html": "documentation build ./src/** -f html -o ./docs",
+    "doc:markdown": "documentation build ./src/** -f md -o ./docs.md",
+    "doc:lint": "documentation lint ./src/**",
+    "doc": "npm run doc:lint && npm run doc:markdown && npm run doc:html"
   },
   "dependencies": {
     "promise-file-reader": "^1.0.0",
@@ -24,6 +28,7 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
+    "documentation": "^5.3.5",
     "eslint": "^4.13.1",
     "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-plugin-import": "^2.8.0",

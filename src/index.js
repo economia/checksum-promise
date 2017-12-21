@@ -3,6 +3,11 @@ import { readAsArrayBuffer } from 'promise-file-reader'
 
 const DEFAULT_CHUNK_SIZE = 10485760
 
+/**
+ * Checksum class
+ *
+ * @param {{chunkSize: number?}} options
+ */
 export default class Checksum {
   constructor (options) {
     const defaultOptions = {
@@ -12,6 +17,11 @@ export default class Checksum {
     this.options = Object.assign({}, defaultOptions, options)
   }
 
+  /**
+   *
+   * @param {Object} file
+   * @returns {Promise<any>}
+   */
   calculateMd5 (file) {
     return new Promise((resolve, reject) => {
       const {
@@ -36,6 +46,10 @@ export default class Checksum {
     })
   }
 
+  /**
+   *
+   * @returns {Promise<any>}
+   */
   readSlice () {
     return new Promise((resolve, reject) => {
       let {
