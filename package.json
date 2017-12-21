@@ -1,6 +1,6 @@
 {
   "name": "checksum-promise",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Get checksum of a file in the browser using promises.",
   "module": "src/index.js",
   "main": "lib/checksum-promise.js",
@@ -18,7 +18,9 @@
     "doc:html": "documentation build ./src/** -f html -o ./docs",
     "doc:markdown": "documentation build ./src/** -f md -o ./docs.md",
     "doc:lint": "documentation lint ./src/**",
-    "doc": "npm run doc:lint && npm run doc:markdown && npm run doc:html"
+    "doc": "npm run doc:lint && npm run doc:markdown && npm run doc:html",
+    "preversion": "npm run eslint",
+    "version": "npm run build && npm run doc && git add ."
   },
   "dependencies": {
     "promise-file-reader": "^1.0.0",
