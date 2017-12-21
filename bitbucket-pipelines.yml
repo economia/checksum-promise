@@ -15,4 +15,4 @@ pipelines:
             - node
           script:
             - mv .npmrc_config .npmrc
-            - npm release
+            - npm publish
