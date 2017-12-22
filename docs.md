@@ -16,6 +16,8 @@ Checksum class
 
 ### calculateMd5
 
+Calculates the MD5 checksum of the provided file
+
 **Parameters**
 
 -   `file` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
@@ -23,5 +25,7 @@ Checksum class
 Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;any>** 
 
 ### readSlice
+
+Reads a chunk of the provided file and appends it to the Spark Array Buffer
 
 Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;any>** 

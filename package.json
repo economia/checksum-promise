@@ -1,6 +1,6 @@
 {
   "name": "checksum-promise",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Get checksum of a file in the browser using promises.",
   "module": "src/index.js",
   "main": "lib/checksum-promise.js",
