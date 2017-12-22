@@ -8,7 +8,7 @@ Complete documentation of the files can be found [here](./docs.md).
 First of all you need to include the Checksum class (either via ES6 imports or using CommonJS): 
 
 ### ES6
-```ecmascript 6
+```js
 import Checksum from 'checksum-promise'
 ```
 
