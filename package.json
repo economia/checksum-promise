@@ -1,10 +1,10 @@
 {
   "name": "checksum-promise",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get checksum of a file in the browser using promises.",
   "module": "src/index.js",
   "main": "lib/checksum-promise.js",
-  "repository": "https://bitbucket.org/it-economia/checksum-promise",
+  "repository": "bitbucket:it-economia/checksum-promise",
   "contributors": [
     "Patrik Šlárka <patrik.slarka@economia.cz>",
     "Josef Jadrný <josef.jadrny@economia.cz>",
