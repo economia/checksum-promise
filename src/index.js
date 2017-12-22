@@ -18,7 +18,7 @@ export default class Checksum {
   }
 
   /**
-   *
+   * Calculates the MD5 checksum of the provided file
    * @param {Object} file
    * @returns {Promise<any>}
    */
@@ -47,7 +47,7 @@ export default class Checksum {
   }
 
   /**
-   *
+   * Reads a chunk of the provided file and appends it to the Spark Array Buffer
    * @returns {Promise<any>}
    */
   readSlice () {
