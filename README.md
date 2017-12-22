@@ -20,7 +20,7 @@ const Checksum = require('checksum-promise')
 Then, all you need to do is instantiate the class (optionally passing in a config object): 
 
 ```js
-    const checksum = new Checksum()
+const checksum = new Checksum()
 ```
 
 Currently, the only option available in the config is the chunk size you want to divide your file by. 
