@@ -20,7 +20,8 @@
     "doc:lint": "documentation lint ./src/**",
     "doc": "npm run doc:lint && npm run doc:markdown && npm run doc:html",
     "preversion": "npm run eslint",
-    "version": "npm run build && npm run doc && git add ."
+    "version": "npm run build && npm run doc && git add .",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "promise-file-reader": "^1.0.0",
