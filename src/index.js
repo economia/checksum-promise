@@ -15,6 +15,7 @@ export default class Checksum {
     }
 
     this.options = Object.assign({}, defaultOptions, options)
+    this.currentChunk = 0
   }
 
   /**
@@ -27,7 +28,6 @@ export default class Checksum {
       const {
         chunkSize
       } = this.options
-
       const spark = new SparkMD5.ArrayBuffer()
 
       Object.assign(this, {
@@ -52,26 +52,21 @@ export default class Checksum {
    */
   readSlice () {
     return new Promise((resolve, reject) => {
-      let {
+      const {
         blobSlice,
         chunks,
-        currentChunk,
         file,
-        options,
+        options: {
+          chunkSize
+        },
         spark
       } = this
-
-      const {
-        chunkSize
-      } = options
-
-      const start = currentChunk * chunkSize
+      const start = this.currentChunk * chunkSize
       const end = ((start + chunkSize) >= file.size) ? file.size : start + chunkSize
 
       return readAsArrayBuffer(blobSlice.call(file, start, end)).then(loadedArrayBuffer => {
         spark.append(loadedArrayBuffer)
-        currentChunk++
-        if (currentChunk < chunks) {
+        if (++this.currentChunk < chunks) {
           return this.readSlice().then(() => {
             return resolve()
           })
