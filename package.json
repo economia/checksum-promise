@@ -4,7 +4,13 @@
   "description": "Get checksum of a file in the browser using promises.",
   "module": "src/index.js",
   "main": "lib/checksum-promise.js",
-  "repository": "bitbucket:it-economia/checksum-promise",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/economia/checksum-promise.git"
+  },
+  "bugs": {
+    "url": "https://github.com/economia/checksum-promise/issues"
+  },
   "contributors": [
     "Patrik Šlárka <patrik.slarka@economia.cz>",
     "Josef Jadrný <josef.jadrny@economia.cz>",
