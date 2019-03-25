@@ -1,5 +1,5 @@
 {
-  "name": "checksum-promise",
+  "name": "@economia/checksum-promise",
   "version": "1.0.3",
   "description": "Get checksum of a file in the browser using promises.",
   "module": "src/index.js",
@@ -45,5 +45,10 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "webpack": "^3.10.0"
-  }
+  },
+  "homepage": "https://github.com/economia/checksum-promise#readme",
+  "directories": {
+    "doc": "docs"
+  },
+  "author": "sklep@economia.cz"
 }
