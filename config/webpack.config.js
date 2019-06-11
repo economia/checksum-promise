@@ -11,13 +11,14 @@ module.exports = {
     libraryTarget: 'umd'
   },
   module: {
-    loaders: [
+    rules: [
       {
         loader: 'babel-loader',
         include: path.resolve(__dirname, '../src'),
+        exclude: /node_modules/,
         test: /\.js$/,
         query: {
-          presets: ['es2015']
+          presets: ['@babel/preset-env']
         }
       }
     ]

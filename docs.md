@@ -3,41 +3,47 @@
 ### Table of Contents
 
 -   [Checksum][1]
-    -   [calculateMd5][2]
-    -   [readSlice][3]
+    -   [Parameters][2]
+    -   [calculateMd5][3]
+        -   [Parameters][4]
+    -   [readSlice][5]
 
 ## Checksum
 
 Checksum class
 
-**Parameters**
+### Parameters
 
--   `options` **{chunkSize: [number][4]?}** 
+-   `options` **{chunkSize: [number][6]?}** 
 
 ### calculateMd5
 
 Calculates the MD5 checksum of the provided file
 
-**Parameters**
+#### Parameters
 
--   `file` **[Object][5]** 
+-   `file` **[Object][7]** 
 
-Returns **[Promise][6]&lt;any>** 
+Returns **[Promise][8]&lt;any>** 
 
 ### readSlice
 
 Reads a chunk of the provided file and appends it to the Spark Array Buffer
 
-Returns **[Promise][6]&lt;any>** 
+Returns **[Promise][8]&lt;any>** 
 
 [1]: #checksum
 
-[2]: #calculatemd5
+[2]: #parameters
 
-[3]: #readslice
+[3]: #calculatemd5
 
-[4]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[4]: #parameters-1
 
-[5]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[5]: #readslice
 
-[6]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[6]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+[7]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+
+[8]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
